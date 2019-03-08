@@ -16,6 +16,12 @@ prompt = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 for i in prompt:
     if i == "e":
         msg = input("Message: ")
+        msg = text.split(msg)
         key = input("Key: ")
-        print(associations.find(x) for x in msg)
+        key = text.split(key)
+        for x in msg:
+            print(associations.find(x))
         print(associations.find(y) for y in key)
+    elif i == "d":
+        dmsg = input("Message: ")
+        dkey = input("Key: ")
