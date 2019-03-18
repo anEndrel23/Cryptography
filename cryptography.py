@@ -14,14 +14,19 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 prompt = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 
 for i in prompt:
-    if i == "e":
-        msg = input("Message: ")
-        msg = text.split(msg)
-        key = input("Key: ")
-        key = text.split(key)
-        for x in msg:
-            print(associations.find(x))
-        print(associations.find(y) for y in key)
+    if i == 'e':
+        msg = input('Message: ')
+        key = input('Key: ')
+        gg = ''
+        if len(msg) > len(key):
+            while True:
+                gg += key
+                    if len(kk) >= len(msg):
+                        break
+            em = [associations.find(x) for x in msg]
+            ek = [associations.find(y) for y in gg]
     elif i == "d":
         dmsg = input("Message: ")
         dkey = input("Key: ")
+    elif i == "d":
+        print("
