@@ -23,10 +23,13 @@ for i in prompt:
                 gg += key
                     if len(kk) >= len(msg):
                         break
-            em = [associations.find(x) for x in msg]
-            ek = [associations.find(y) for y in gg]
+        em = [associations.find(x) for x in msg]
+        ek = [associations.find(y) for y in gg]
+            print(zip(msg, gg))
     elif i == "d":
         dmsg = input("Message: ")
         dkey = input("Key: ")
     elif i == "d":
-        print("
+        print("Goodbye!")
+    else:
+        print("Did not understand command, try again.")
