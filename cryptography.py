@@ -24,8 +24,8 @@ for i in prompt:
             if len(msg) > len(key):
                 while True:
                     gg += key
-                        if len(kk) >= len(msg):
-                            break
+                    if len(kk) >= len(msg):
+                        break
             em = [associations.find(x) for x in msg]
             ek = [associations.find(y) for y in gg]
             mm = [(em + ek for em, ek in zip(em, ek)]
@@ -38,8 +38,8 @@ for i in prompt:
             if len(msg) > len(key):
                 while True:
                     gg += key
-                        if len(kk) >= len(msg):
-                            break
+                    if len(kk) >= len(msg):
+                        break
             em = [associations.find(x) for x in msg]
             ek = [associations.find(y) for y in gg]
             mm = [(em + ek for em, ek in zip(em, ek)]
