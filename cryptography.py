@@ -41,7 +41,7 @@ while yaboi != 6:
                             break
                 em = [associations.find(x) for x in msg]
                 ek = [associations.find(y) for y in gg]
-                mm = [em + ek for em, ek in zip(em, ek)]
+                mm = [em - ek for em, ek in zip(em, ek)]
                 outpt = ''.join(associations[i % len(associations)] for i in mm)
                 print(outpt)
             elif i == "q":
