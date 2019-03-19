@@ -13,23 +13,40 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 
 prompt = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 
+test = 7
+
 for i in prompt:
-    if i == 'e':
-        msg = input('Message: ')
-        key = input('Key: ')
-        gg = ''
-        if len(msg) > len(key):
-            while True:
-                gg += key
-                    if len(kk) >= len(msg):
-                        break
-        em = [associations.find(x) for x in msg]
-        ek = [associations.find(y) for y in gg]
-            print(zip(msg, gg))
-    elif i == "d":
-        dmsg = input("Message: ")
-        dkey = input("Key: ")
-    elif i == "d":
-        print("Goodbye!")
-    else:
-        print("Did not understand command, try again.")
+    while test != 6:
+        if i == 'e':
+            msg = input('Message: ')
+            key = input('Key: ')
+            gg = ''
+            if len(msg) > len(key):
+                while True:
+                    gg += key
+                        if len(kk) >= len(msg):
+                            break
+            em = [associations.find(x) for x in msg]
+            ek = [associations.find(y) for y in gg]
+            mm = [(em + ek for em, ek in zip(em, ek)]
+            outpt = ''.join(associations[i % len(associations)] for i in mm)
+            print(outpt)
+        elif i == "d":
+            msg = input('Message: ')
+            key = input('Key: ')
+            gg = ''
+            if len(msg) > len(key):
+                while True:
+                    gg += key
+                        if len(kk) >= len(msg):
+                            break
+            em = [associations.find(x) for x in msg]
+            ek = [associations.find(y) for y in gg]
+            mm = [(em + ek for em, ek in zip(em, ek)]
+            outpt = ''.join(associations[i % len(associations)] for i in mm)
+            print(outpt)
+        elif i == "q":
+            print("Goodbye!")
+            return
+        else:
+            print("Did not understand command, try again.")
