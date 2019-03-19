@@ -11,42 +11,41 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
-prompt = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
+yaboi = 7
 
-test = 7
-
-for i in prompt:
-    while test != 6:
-        if i == 'e':
-            msg = input('Message: ')
-            key = input('Key: ')
-            gg = ''
-            if len(msg) > len(key):
-                while True:
-                    gg += key
-                    if len(gg) >= len(msg):
-                        break
-            em = [associations.find(x) for x in msg]
-            ek = [associations.find(y) for y in gg]
-            mm = [em + ek for em, ek in zip(em, ek)]
-            outpt = ''.join(associations[i % len(associations)] for i in mm)
-            print(outpt)
-        elif i == "d":
-            msg = input('Message: ')
-            key = input('Key: ')
-            gg = ''
-            if len(msg) > len(key):
-                while True:
-                    gg += key
-                    if len(gg) >= len(msg):
-                        break
-            em = [associations.find(x) for x in msg]
-            ek = [associations.find(y) for y in gg]
-            mm = [em + ek for em, ek in zip(em, ek)]
-            outpt = ''.join(associations[i % len(associations)] for i in mm)
-            print(outpt)
-        elif i == "q":
-            print("Goodbye!")
-            return
-        else:
-            print("Did not understand command, try again.")
+while yaboi != 6:
+    prompt = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
+    for i in prompt:
+            if i == 'e':
+                msg = input('Message: ')
+                key = input('Key: ')
+                gg = ''
+                if len(msg) > len(key):
+                    while True:
+                        gg += key
+                        if len(gg) >= len(msg):
+                            break
+                em = [associations.find(x) for x in msg]
+                ek = [associations.find(y) for y in gg]
+                mm = [em + ek for em, ek in zip(em, ek)]
+                outpt = ''.join(associations[i % len(associations)] for i in mm)
+                print(outpt)
+            elif i == "d":
+                msg = input('Message: ')
+                key = input('Key: ')
+                gg = ''
+                if len(msg) > len(key):
+                    while True:
+                        gg += key
+                        if len(gg) >= len(msg):
+                            break
+                em = [associations.find(x) for x in msg]
+                ek = [associations.find(y) for y in gg]
+                mm = [em + ek for em, ek in zip(em, ek)]
+                outpt = ''.join(associations[i % len(associations)] for i in mm)
+                print(outpt)
+            elif i == "q":
+                print("Goodbye!")
+                return
+            else:
+                print("Did not understand command, try again.")
