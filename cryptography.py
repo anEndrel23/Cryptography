@@ -24,11 +24,11 @@ for i in prompt:
             if len(msg) > len(key):
                 while True:
                     gg += key
-                    if len(kk) >= len(msg):
+                    if len(gg) >= len(msg):
                         break
             em = [associations.find(x) for x in msg]
             ek = [associations.find(y) for y in gg]
-            mm = [(em + ek for em, ek in zip(em, ek)]
+            mm = [em + ek for em, ek in zip(em, ek)]
             outpt = ''.join(associations[i % len(associations)] for i in mm)
             print(outpt)
         elif i == "d":
@@ -38,11 +38,11 @@ for i in prompt:
             if len(msg) > len(key):
                 while True:
                     gg += key
-                    if len(kk) >= len(msg):
+                    if len(gg) >= len(msg):
                         break
             em = [associations.find(x) for x in msg]
             ek = [associations.find(y) for y in gg]
-            mm = [(em + ek for em, ek in zip(em, ek)]
+            mm = [em + ek for em, ek in zip(em, ek)]
             outpt = ''.join(associations[i % len(associations)] for i in mm)
             print(outpt)
         elif i == "q":
