@@ -11,14 +11,14 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
-yaboi = 7
+itsyaboi = 7
 
 
 
-while yaboi != 6:
+while itsyaboi != 6:
     prompt = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     if prompt == "q":
-        yaboi = 6
+        itsyaboi = 6
     for i in prompt:
             if i == 'e':
                 msg = input('Message: ')
