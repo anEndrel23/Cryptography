@@ -13,8 +13,12 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 
 yaboi = 7
 
+
+
 while yaboi != 6:
     prompt = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
+    if prompt == "q":
+        yaboi = 6
     for i in prompt:
             if i == 'e':
                 msg = input('Message: ')
@@ -44,8 +48,7 @@ while yaboi != 6:
                 mm = [em - ek for em, ek in zip(em, ek)]
                 outpt = ''.join(associations[i % len(associations)] for i in mm)
                 print(outpt)
-            elif i == "q":
-                print("Goodbye!")
-                return
             else:
                 print("Did not understand command, try again.")
+                
+print("Goodbye!")
