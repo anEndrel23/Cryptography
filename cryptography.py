@@ -31,8 +31,8 @@ while itsyaboi != 6:
                             break
                 em = [associations.find(x) for x in msg]
                 ek = [associations.find(y) for y in gg]
-                mm = [em + ek for em, ek in zip(em, ek)]
-                outpt = ''.join(associations[i % len(associations)] for i in mm)
+                eadd = [em + ek for em, ek in zip(em, ek)]
+                outpt = ''.join(associations[i % len(associations)] for i in eadd)
                 print(outpt)
             elif i == "d":
                 msg = input('Message: ')
@@ -45,8 +45,8 @@ while itsyaboi != 6:
                             break
                 em = [associations.find(x) for x in msg]
                 ek = [associations.find(y) for y in gg]
-                mm = [em - ek for em, ek in zip(em, ek)]
-                outpt = ''.join(associations[i % len(associations)] for i in mm)
+                eadd = [em - ek for em, ek in zip(em, ek)]
+                outpt = ''.join(associations[i % len(associations)] for i in eadd)
                 print(outpt)
             else:
                 print("Did not understand command, try again.")
