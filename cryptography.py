@@ -49,8 +49,7 @@ while itsyaboi != 6:
                 outpt = ''.join(associations[i % len(associations)] for i in eadd)
                 print(outpt)
             elif i == "q":
-                print("Goodbye!")
-                return
+                break
             else:
                 print("Did not understand command, try again.")
                 
